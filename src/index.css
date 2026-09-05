@@ -63,7 +63,7 @@ html, body {
   height: 86vh;
   max-height: 86vh;
   position: fixed;
-  top: 7vh;
+  top: 11vh; /* Aumentato per abbassarlo ulteriormente (prova 12vh o 13vh se vuoi scendere ancora) */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
