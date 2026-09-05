@@ -129,35 +129,25 @@ header h1 {
     pointer-events: none;
 }
 /* =======================================================
-   FIX 1: TIPI SOVRAPPOSTI NELLA LISTA A SINISTRA
+   FIX DEFINITIVO: TIPI TAGLIATI NELLA LISTA POKÉMON
    ======================================================= */
-.type-badge-cluster {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 4px !important;
-    align-items: center !important;
-    justify-content: center !important;
+/* Impedisce ai contenitori dei tipi di andare a capo all'interno della griglia */
+.pokedex-screen .grid > div .flex {
+    flex-wrap: nowrap !important;
+    gap: 0.2rem !important; /* Stringe al massimo lo spazio tra i due tipi */
 }
 
-.type-badge-cluster > * {
-    flex-shrink: 0 !important;
-    white-space: nowrap !important; /* Impedisce che testi lunghi come "Folletto" si taglino o vadano a capo */
+/* Adatta le pillole stringendo i bordi interni per farcele stare sempre entrambe */
+.pokedex-screen .grid > div .flex > * {
+    white-space: nowrap !important;
+    padding-left: 0.35rem !important;
+    padding-right: 0.35rem !important;
+    flex-shrink: 1 !important; /* Permette alla pillola di schiacciarsi se manca spazio */
 }
 
-/* =======================================================
-   FIX 2: NUMERO GIGANTE NELLA SCHEDA DETTAGLIO (#0298)
-   ======================================================= */
-/* Colpisce chirurgicamente il numero posizionato a destra nell'intestazione del Pokémon */
-.pokedex-screen .relative [class*="absolute"][class*="right-"] {
-    font-family: ui-monospace, SFMono-Regular, Monaco, Consolas, monospace !important;
-    font-size: 6rem !important; /* Grandezza in stile filigrana */
-    font-weight: 900 !important;
-    line-height: 1 !important;
-    opacity: 0.12 !important;
-    color: black !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    right: 1.5rem !important;
-    z-index: 0;
-    pointer-events: none;
+/* Riduce leggermente la grandezza del testo per accomodare parole lunghe */
+.pokedex-screen .grid > div .flex > * > span {
+    font-size: 0.65rem !important; 
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
 }
