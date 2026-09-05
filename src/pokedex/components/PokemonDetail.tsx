@@ -190,9 +190,15 @@ export default function PokemonDetail({
             </div>
           </div>
 
-          {/* Number — right column, balances the artwork on the left */}
+        {/* Number — right column, balances the artwork on the left */}
           <div className="hidden shrink-0 self-center pl-2 sm:block">
-            <div className="pokemon-detail-number">
+            <div 
+              className="font-black text-white/50 drop-shadow-md"
+              style={{
+                fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+                transform: 'skewX(-8deg)'
+              }}
+            >
               #{String(detail.id).padStart(4, '0')}
             </div>
           </div>
