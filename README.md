@@ -1,1 +1,1 @@
-Pokedex for competitive and fun created with AI
+ Pokedex for competitive and fun created with AI
