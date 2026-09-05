@@ -55,9 +55,12 @@ html, body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-* SPOSTAMENTO MANUALE DIRETTO: Modifica i pixel o le percentuali qui sotto per regolarlo al millimetro */
+/* SPOSTAMENTO MANUALE DIRETTO: Modifica i pixel o le percentuali qui sotto per regolarlo al millimetro */
 #root {
   width: 96%;
   max-width: 1400px;
@@ -134,17 +137,6 @@ header h1 {
 
 .animate-hinge-open h1 {
     color: #FFFFFF !important;
-}
-
-.pokedex-screen [class*="absolute"][class*="bottom-"][class*="right-"],
-.pokedex-screen div:has(> span:contains("#")) > span:last-child {
-    font-family: ui-monospace, SFMono-Regular, Monaco, Consolas, monospace !important;
-    font-size: 4.5rem !important; 
-    font-weight: 900 !important;
-    opacity: 0.15 !important;
-    color: black !important;
-    z-index: 0;
-    pointer-events: none;
 }
 
 .pokedex-screen .grid > div .flex {
