@@ -57,15 +57,13 @@ html, body {
   font-family: system-ui, -apple-system, sans-serif;
 }
 
+* SPOSTAMENTO MANUALE DIRETTO: Modifica i pixel o le percentuali qui sotto per regolarlo al millimetro */
 #root {
   width: 96%;
   max-width: 1400px;
-  height: 86vh;
-  max-height: 86vh;
-  position: fixed;
-  top: 11vh; /* Aumentato per abbassarlo ulteriormente (prova 12vh o 13vh se vuoi scendere ancora) */
-  left: 50%;
-  transform: translateX(-50%);
+  height: 85vh;
+  max-height: 85vh;
+  margin-top: 80px; /* <--- Aumenta questo valore (es. 100px, 120px) per abbassarlo quanto vuoi! */
   display: flex;
   flex-direction: column;
   overflow: hidden;
