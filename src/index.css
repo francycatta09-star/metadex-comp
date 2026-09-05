@@ -46,7 +46,9 @@
   border-color: hsl(var(--border));
 }
 
-/* BLOCCO CENTRATURA CON ALTEZZA PERSONALIZZATA */
+/* =======================================================
+   BLOCCO FINALE: CENTRATURA CHIRURGICA
+   ======================================================= */
 html, body {
   width: 100%;
   height: 100vh;
@@ -58,7 +60,7 @@ html, body {
   font-family: system-ui, -apple-system, sans-serif;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Parte dall'alto ma si sposta col margine */
+  align-items: flex-start;
 }
 
 #root {
@@ -68,7 +70,7 @@ html, body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  margin-top: 4vh; /* REGOLA QUESTO: Aumentalo se vuoi alzarlo (es. 6vh), diminuisci se vuoi abbassarlo (es. 2vh) */
+  margin-top: 7.5vh; /* Aumentato leggermente per farlo scendere al punto giusto */
 }
 
 #root > div {
