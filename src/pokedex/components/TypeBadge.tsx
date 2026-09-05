@@ -39,18 +39,18 @@ export default function TypeBadge({
   const localizedName = typeNames[lang]?.[type] ?? info.name;
 
   const sizeClasses = {
-    sm: 'px-2 py-0.5 text-xs gap-1',
+    sm: 'px-1.5 py-0.5 text-[10px] gap-0.5', // Spaziature ristrette per farli stare comodamente affiancati
     md: 'px-3 py-1 text-sm gap-1.5',
     lg: 'px-4 py-1.5 text-base gap-2',
   };
 
   const iconSizes = {
-    sm: 12,
+    sm: 10, // Icona leggermente più compatta per la card
     md: 14,
     lg: 16,
   };
 
-  const className = `type-badge inline-flex items-center rounded-full font-bold uppercase transition-transform hover:scale-105 ${sizeClasses[size]}`;
+  const className = `type-badge inline-flex shrink-0 items-center rounded-full font-bold uppercase transition-transform hover:scale-105 ${sizeClasses[size]}`;
   const style = {
     backgroundColor: info.color,
     backgroundImage: 'linear-gradient(135deg, rgba(255,255,255,0.38), transparent 42%, rgba(0,0,0,0.16))',
@@ -59,7 +59,7 @@ export default function TypeBadge({
     textShadow: info.textColor === '#ffffff' ? '0 1px 2px rgba(23,50,77,0.28)' : '0 1px 1px rgba(255,255,255,0.3)',
   };
   const content = (
-    <span className="relative z-10 inline-flex items-center">
+    <span className="relative z-10 inline-flex items-center whitespace-nowrap">
       <Icon size={iconSizes[size]} />
       {localizedName}
     </span>
