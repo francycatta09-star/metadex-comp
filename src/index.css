@@ -53,59 +53,47 @@ body {
   font-family: system-ui, -apple-system, sans-serif;
 }
 
-/* ----------------------------------------------------
-   FORZATURA HEADER ROSSO (IL CONTENITORE DELLA SCRITTA METADEX)
-   Usiamo child combinators per colpire il primissimo div della pagina
-------------------------------------------------------- */
-#root > div {
-    /* Assicura che l'intero container dell'app non sia coperto dal rosso, serve solo per referenza */
-}
+/* =======================================================
+   CLASSI CUSTOM DAL TUO CODICE REACT
+   ======================================================= */
 
-/* Colpiamo brutalmente il PRIMO div in alto che contiene "Metadex" */
+/* 1. Forza il rosso sull'header e sulla classe bg-pokedex-red */
+.bg-pokedex-red,
 #root > div > div:first-child,
-#root > div > header,
-nav[class*="border"],
-div.w-full:has(h1) {
-    background-color: #E3350D !important; /* Rosso Pokédex */
-    background-image: linear-gradient(to bottom, #E3350D, #C62828) !important;
-    color: #FFFFFF !important;
-    border-bottom: 3px solid #8B0000 !important;
-}
-
-/* Costringiamo il titolo Metadex e la lente ad essere bianchi */
-#root > div > div:first-child h1,
-#root > div > div:first-child span,
-div.w-full:has(h1) h1 {
-    color: #FFFFFF !important;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important;
-}
-
-/* Mantiene trasparenti/bianchi i bottoncini come il badge "POKÉDEX" nell'header */
-#root > div > div:first-child button {
-    background-color: rgba(255,255,255,0.2) !important;
+header {
+    background-color: #E3350D !important;
+    background-image: linear-gradient(180deg, #E3350D 0%, #C62828 100%) !important;
     color: white !important;
 }
 
-/* ----------------------------------------------------
-   FORZATURA NUMERO POKEDEX (#0025 ECC)
-------------------------------------------------------- */
-/* Cerca stringhe che iniziano con # seguite da numeri (il selettore CSS puro non può, quindi andiamo a colpire la posizione) */
-
-/* Il numero in basso a destra nella card dei dettagli */
-.absolute.bottom-4.right-4,
-.absolute.bottom-6.right-6,
-div:has(> span[class*="text-"]) > span:last-child {
-    font-family: "Courier New", Courier, monospace !important;
-    font-size: 4rem !important; /* Molto grande */
-    font-weight: 900 !important;
-    opacity: 0.15 !important; /* Effetto filigrana sullo sfondo */
-    color: black !important;
+/* Assicura che i testi nell'header siano bianchi */
+.bg-pokedex-red h1,
+.bg-pokedex-red span,
+.bg-pokedex-red a,
+#root > div > div:first-child h1,
+header h1 {
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3) !important;
 }
 
-/* I numerini piccoli sotto le icone nella lista a sinistra (es. #0001 Bulbasaur) */
-.text-sm.text-muted-foreground {
+/* 2. Il numerino piccolo sulle liste dei Pokémon (Classe estratta dal tuo codice) */
+.pokemon-number {
     font-family: ui-monospace, SFMono-Regular, Monaco, Consolas, monospace !important;
-    font-size: 1rem !important;
+    font-size: 0.95rem !important; 
     font-weight: 800 !important;
-    color: #475569 !important;
+    color: #64748b !important;
+    letter-spacing: 0.05em;
+    padding-top: 0.25rem;
+}
+
+/* 3. Il numero gigante in filigrana (Es. il #0025 nella pagina principale) */
+.absolute.bottom-4.right-4,
+.absolute.bottom-6.right-6,
+.absolute.bottom-2.right-3 {
+    font-family: ui-monospace, SFMono-Regular, Monaco, Consolas, monospace !important;
+    font-size: 4.5rem !important; /* Estremamente grande */
+    font-weight: 900 !important;
+    opacity: 0.15 !important;     /* Semitrasparente stile filigrana */
+    color: black !important;
+    z-index: 0;
 }
