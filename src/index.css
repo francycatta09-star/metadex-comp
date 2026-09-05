@@ -46,18 +46,45 @@
   border-color: hsl(var(--border));
 }
 
-body {
+/* BLOCCO FINALE: Centratura e blocco scroll pagina intera */
+html, body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
-  min-height: 100vh;
   font-family: system-ui, -apple-system, sans-serif;
 }
 
+#root {
+  width: 100%;
+  height: 86vh;
+  max-height: 86vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#root > div {
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
 /* =======================================================
-   CLASSI CUSTOM DAL TUO CODICE REACT
+   CLASSI CUSTOM 
    ======================================================= */
 
-/* 1. Forza il rosso sull'header e sulla classe bg-pokedex-red */
 .bg-pokedex-red,
 #root > div > div:first-child,
 header {
@@ -66,7 +93,6 @@ header {
     color: white !important;
 }
 
-/* Assicura che i testi nell'header siano bianchi */
 .bg-pokedex-red h1,
 .bg-pokedex-red span,
 .bg-pokedex-red a,
@@ -76,7 +102,6 @@ header h1 {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3) !important;
 }
 
-/* 2. Il numerino piccolo sulle liste dei Pokémon (Classe estratta dal tuo codice) */
 .pokemon-number {
     font-family: ui-monospace, SFMono-Regular, Monaco, Consolas, monospace !important;
     font-size: 0.95rem !important; 
@@ -86,23 +111,22 @@ header h1 {
     padding-top: 0.25rem;
 }
 
-/* 3. Il numero gigante in filigrana (Es. il #0025 nella pagina principale) */
 .absolute.bottom-4.right-4,
 .absolute.bottom-6.right-6,
 .absolute.bottom-2.right-3 {
     font-family: ui-monospace, SFMono-Regular, Monaco, Consolas, monospace !important;
-    font-size: 4.5rem !important; /* Estremamente grande */
+    font-size: 4.5rem !important;
     font-weight: 900 !important;
-    opacity: 0.15 !important;     /* Semitrasparente stile filigrana */
+    opacity: 0.15 !important;
     color: black !important;
     z-index: 0;
-}/* 1. COLORAZIONE HEADER ROSSO (Scocca superiore) */
+}
+
 .pokedex-shell {
     background-color: #E3350D !important;
     background-image: linear-gradient(180deg, #E3350D 0%, #C62828 100%) !important;
 }
 
-/* Protegge l'area dello schermo e i pulsanti mantenendo i loro colori originali */
 .pokedex-shell .screen-glow,
 .pokedex-shell .bg-\\[\\#17324d\\] {
     background-color: #17324d !important;
@@ -111,13 +135,10 @@ header h1 {
     background-color: #fbfcf8 !important;
 }
 
-/* Forza il titolo Metadex in bianco */
 .animate-hinge-open h1 {
     color: #FFFFFF !important;
 }
 
-/* 2. NUMERO GIGANTE IN FILIGRANA (#0025) */
-/* Cerca in modo brutale qualsiasi testo posizionato in basso a destra nello schermo */
 .pokedex-screen [class*="absolute"][class*="bottom-"][class*="right-"],
 .pokedex-screen div:has(> span:contains("#")) > span:last-child {
     font-family: ui-monospace, SFMono-Regular, Monaco, Consolas, monospace !important;
@@ -128,57 +149,21 @@ header h1 {
     z-index: 0;
     pointer-events: none;
 }
-/* =======================================================
-   FIX DEFINITIVO: TIPI TAGLIATI NELLA LISTA POKÉMON
-   ======================================================= */
-/* Impedisce ai contenitori dei tipi di andare a capo all'interno della griglia */
+
 .pokedex-screen .grid > div .flex {
     flex-wrap: nowrap !important;
-    gap: 0.2rem !important; /* Stringe al massimo lo spazio tra i due tipi */
+    gap: 0.2rem !important;
 }
 
-/* Adatta le pillole stringendo i bordi interni per farcele stare sempre entrambe */
 .pokedex-screen .grid > div .flex > * {
     white-space: nowrap !important;
     padding-left: 0.35rem !important;
     padding-right: 0.35rem !important;
-    flex-shrink: 1 !important; /* Permette alla pillola di schiacciarsi se manca spazio */
+    flex-shrink: 1 !important;
 }
 
-/* Riduce leggermente la grandezza del testo per accomodare parole lunghe */
 .pokedex-screen .grid > div .flex > * > span {
     font-size: 0.65rem !important; 
     overflow: hidden !important;
     text-overflow: ellipsis !important;
-}//* /* =======================================================
-   BLOCCO TOTALE SCROLL PAGINA INTERA
-   ======================================================= */
-html, body {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden !important;
-    position: fixed !important;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#root {
-    width: 100%;
-    height: 86vh;
-    max-height: 86vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden !important;
-}
-
-#root > div {
-    height: 100%;
-    max-height: 100%;
-    overflow: hidden !important;
-    display: flex;
-    flex-direction: column;
-}
 }
