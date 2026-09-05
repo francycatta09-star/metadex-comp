@@ -68,7 +68,7 @@ html, body {
   flex-direction: column;
   overflow: hidden;
   position: fixed !important;
-  top: 7vh !important; /* Sposta l'app esattamente a 7% dall'alto della pagina */
+  top: 5vh !important; /* Sposta l'app esattamente a 7% dall'alto della pagina */
   left: 0;
   right: 0;
   margin: 0 auto;     /* Centra perfettamente in orizzontale */
