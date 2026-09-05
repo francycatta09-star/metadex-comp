@@ -1,99 +1,32 @@
-@import "tailwindcss";
-
-@theme {
-  --color-background: hsl(var(--background));
-  --color-foreground: hsl(var(--foreground));
-  --color-card: hsl(var(--card));
-  --color-card-foreground: hsl(var(--card-foreground));
-  --color-popover: hsl(var(--popover));
-  --color-popover-foreground: hsl(var(--popover-foreground));
-  --color-primary: hsl(var(--primary));
-  --color-primary-foreground: hsl(var(--primary-foreground));
-  --color-secondary: hsl(var(--secondary));
-  --color-secondary-foreground: hsl(var(--secondary-foreground));
-  --color-muted: hsl(var(--muted));
-  --color-muted-foreground: hsl(var(--muted-foreground));
-  --color-accent: hsl(var(--accent));
-  --color-accent-foreground: hsl(var(--accent-foreground));
-  --color-border: hsl(var(--border));
-  --color-input: hsl(var(--input));
-  --color-ring: hsl(var(--ring));
-  --radius-lg: var(--radius);
-}
-
-:root {
-  --background: 210 20% 98%;
-  --foreground: 222.2 84% 4.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
-  --primary: 0 72% 51%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-  --muted: 210 40% 92%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 210 40% 90%;
-  --accent-foreground: 222.2 47.4% 11.2%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 0 72% 51%;
-  --radius: 0.75rem;
-}
-
-* {
-  border-color: hsl(var(--border));
-}
-
-body {
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
-  min-height: 100vh;
-  font-family: system-ui, -apple-system, sans-serif;
-}
-
-/* =======================================================
-   CLASSI CUSTOM DAL TUO CODICE REACT
-   ======================================================= */
-
-/* 1. Forza il rosso sull'header e sulla classe bg-pokedex-red */
-.bg-pokedex-red,
-#root > div > div:first-child,
-header {
+/* 1. COLORAZIONE HEADER ROSSO (Scocca superiore) */
+.pokedex-shell {
     background-color: #E3350D !important;
     background-image: linear-gradient(180deg, #E3350D 0%, #C62828 100%) !important;
-    color: white !important;
 }
 
-/* Assicura che i testi nell'header siano bianchi */
-.bg-pokedex-red h1,
-.bg-pokedex-red span,
-.bg-pokedex-red a,
-#root > div > div:first-child h1,
-header h1 {
-    color: white !important;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3) !important;
+/* Protegge l'area dello schermo e i pulsanti mantenendo i loro colori originali */
+.pokedex-shell .screen-glow,
+.pokedex-shell .bg-\\[\\#17324d\\] {
+    background-color: #17324d !important;
+}
+.pokedex-shell .bg-\\[\\#fbfcf8\\] {
+    background-color: #fbfcf8 !important;
 }
 
-/* 2. Il numerino piccolo sulle liste dei Pokémon (Classe estratta dal tuo codice) */
-.pokemon-number {
+/* Forza il titolo Metadex in bianco */
+.animate-hinge-open h1 {
+    color: #FFFFFF !important;
+}
+
+/* 2. NUMERO GIGANTE IN FILIGRANA (#0025) */
+/* Cerca in modo brutale qualsiasi testo posizionato in basso a destra nello schermo */
+.pokedex-screen [class*="absolute"][class*="bottom-"][class*="right-"],
+.pokedex-screen div:has(> span:contains("#")) > span:last-child {
     font-family: ui-monospace, SFMono-Regular, Monaco, Consolas, monospace !important;
-    font-size: 0.95rem !important; 
-    font-weight: 800 !important;
-    color: #64748b !important;
-    letter-spacing: 0.05em;
-    padding-top: 0.25rem;
-}
-
-/* 3. Il numero gigante in filigrana (Es. il #0025 nella pagina principale) */
-.absolute.bottom-4.right-4,
-.absolute.bottom-6.right-6,
-.absolute.bottom-2.right-3 {
-    font-family: ui-monospace, SFMono-Regular, Monaco, Consolas, monospace !important;
-    font-size: 4.5rem !important; /* Estremamente grande */
+    font-size: 4.5rem !important; 
     font-weight: 900 !important;
-    opacity: 0.15 !important;     /* Semitrasparente stile filigrana */
+    opacity: 0.15 !important;
     color: black !important;
     z-index: 0;
+    pointer-events: none;
 }
