@@ -64,7 +64,7 @@ html, body {
 #root {
   width: 96%;
   max-width: 1400px;
-  height: 85vh;
+  height: 60vh;
   max-height: 85vh;
   margin-top: 80px; /* <--- Aumenta questo valore (es. 100px, 120px) per abbassarlo quanto vuoi! */
   display: flex;
