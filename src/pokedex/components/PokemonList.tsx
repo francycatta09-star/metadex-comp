@@ -435,11 +435,6 @@ export default function PokemonList({
           </ul>
         )}
       </div>
-
-    </div>
-  );
-}
-
     </div>
   );
 }
