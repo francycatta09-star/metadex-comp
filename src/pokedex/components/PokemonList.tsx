@@ -409,7 +409,7 @@ export default function PokemonList({
                       <p className="h-5 truncate text-center text-sm font-bold leading-5 capitalize text-[#17324d]">{p.name}</p>
                       
                       {/* Contenitore dei tipi corretto in orizzontale */}
-                      <div className="mt-1.5 flex flex-row flex-wrap items-center justify-center gap-1">
+                     <div className="mt-1.5 flex flex-row flex-wrap items-center justify-center gap-0.5">
                         {p.types.map((tp) => (
                           <TypeBadge
                             key={tp}
