@@ -67,6 +67,19 @@ export default function PokemonList({
   const [filterOpen, setFilterOpen] = useState(false);
   const filterRef = useRef<HTMLDivElement>(null);
 
+  // Sincronizza i filtri se le prop iniziali cambiano dall'esterno
+  useEffect(() => {
+    if (initialType !== undefined) {
+      setTypeFilter(initialType);
+    }
+  }, [initialType]);
+
+  useEffect(() => {
+    if (initialEggGroup !== undefined) {
+      setEggFilter(initialEggGroup);
+    }
+  }, [initialEggGroup]);
+
   // Load the species of the selected egg group (PokeAPI, cached)
   useEffect(() => {
     let cancelled = false;
@@ -362,7 +375,7 @@ export default function PokemonList({
             ))}
           </div>
         ) : eggLoading ? (
-                <div className="flex flex-col items-center justify-center py-12 text-[#557084]/70">
+            <div className="flex flex-col items-center justify-center py-12 text-[#557084]/70">
             <Loader2 size={32} className="mb-2 animate-spin opacity-70" />
             <p className="text-sm">{t(lang, 'loading_list')}</p>
           </div>
@@ -422,6 +435,10 @@ export default function PokemonList({
           </ul>
         )}
       </div>
+
+    </div>
+  );
+}
 
     </div>
   );
