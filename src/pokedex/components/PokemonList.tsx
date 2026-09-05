@@ -67,7 +67,6 @@ export default function PokemonList({
   const [filterOpen, setFilterOpen] = useState(false);
   const filterRef = useRef<HTMLDivElement>(null);
 
-  // Sincronizza i filtri se le prop iniziali cambiano dall'esterno
   useEffect(() => {
     if (initialType !== undefined) {
       setTypeFilter(initialType);
@@ -80,7 +79,6 @@ export default function PokemonList({
     }
   }, [initialEggGroup]);
 
-  // Load the species of the selected egg group (PokeAPI, cached)
   useEffect(() => {
     let cancelled = false;
     if (!eggFilter) {
@@ -409,7 +407,9 @@ export default function PokemonList({
                     </span>
                     <div className="mt-auto min-w-0">
                       <p className="h-5 truncate text-center text-sm font-bold leading-5 capitalize text-[#17324d]">{p.name}</p>
-                      <div className="type-badge-cluster mt-1.5 flex h-11 flex-wrap items-center justify-center gap-1 overflow-hidden">
+                      
+                      {/* Contenitore dei tipi corretto in orizzontale */}
+                      <div className="mt-1.5 flex flex-row flex-wrap items-center justify-center gap-1">
                         {p.types.map((tp) => (
                           <TypeBadge
                             key={tp}
@@ -421,6 +421,7 @@ export default function PokemonList({
                           />
                         ))}
                       </div>
+
                     </div>
                   </button>
                 </li>
