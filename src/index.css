@@ -150,4 +150,30 @@ header h1 {
     font-size: 0.65rem !important; 
     overflow: hidden !important;
     text-overflow: ellipsis !important;
+}/* =======================================================
+   FIX ALTEZZA PERFETTA (BLOCCO SCROLL PAGINA)
+   ======================================================= */
+html, body {
+    height: 100vh;
+    overflow: hidden; /* Blocca lo scroll della finestra principale */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente il contenitore se avanza spazio */
+}
+
+#root {
+    width: 100%;
+    height: 100vh;
+    max-height: 88vh; /* Riduce l'altezza totale lasciando un piccolo margine sopra e sotto */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Assicura che il contenitore interno si adatti allo spazio ridotto */
+#root > div {
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
 }
