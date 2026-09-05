@@ -39,13 +39,13 @@ export default function TypeBadge({
   const localizedName = typeNames[lang]?.[type] ?? info.name;
 
   const sizeClasses = {
-    sm: 'px-1.5 py-0.5 text-[10px] gap-0.5', // Spaziature ristrette per farli stare comodamente affiancati
+    sm: 'px-1 py-0.5 text-[9px] gap-0.5', // Ridotto al minimo per stare sulla stessa riga
     md: 'px-3 py-1 text-sm gap-1.5',
     lg: 'px-4 py-1.5 text-base gap-2',
   };
 
   const iconSizes = {
-    sm: 10, // Icona leggermente più compatta per la card
+    sm: 9, // Icona rimpicciolita per i doppi tipi lunghi
     md: 14,
     lg: 16,
   };
