@@ -46,7 +46,7 @@ function updateRouteFilter(
   );
 }
 function displayPokemonName(name: string): string {
-  return name.replace(/-(land|male|incarnate|zero|red-striped|plant|shield|average|50|baile|Midday|solo|disguised|ice|full-belly|single-strike|family-of-four|greem-plumage|curly|two-segment)$/, '');
+ return name.replace(/-(land|male|incarnate|zero|red-striped|plant|shield|average|50|baile|midday|solo|disguised|ice|full-belly|single-strike|family-of-four|green-plumage|curly|two-segment|standard)$/, '');
 }
 export default function PokemonList({
   pokemon,
