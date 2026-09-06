@@ -84,7 +84,7 @@ export default function PokemonDetail({
   const secondaryColor = (detail.types[1] ? typeInfo[detail.types[1]]?.color : undefined) ?? primaryColor;
 
   return (
-    <div className="flex h-full flex-col overflow-y-auto bg-[#fbfcf8] pokeball-scroll">
+   <div className="flex h-full flex-col overflow-y-scroll bg-[#fbfcf8] pokeball-scroll">
       {/* Header section with type-colored gradient */}
       <div
         className="pokemon-detail-header relative shrink-0 overflow-hidden px-6 pt-5 pb-8 sm:px-8"
