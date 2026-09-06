@@ -123,3 +123,23 @@ export interface TypeInfo {
 }
 
 export type LanguageCode = 'it' | 'en' | 'es' | 'fr' | 'de' | 'ja';
+// src/pokedex/types.ts (o dove definisci il tipo Move)
+export type SpecialMoveType = 'z-move' | 'z-exclusive' | 'max-move' | 'g-max' | 'signature';
+
+export interface Move {
+  id: string;
+  name: string;
+  type: string;
+  category: 'Physical' | 'Special' | 'Status';
+  specialType?: SpecialMoveType;
+  // ... altri campi esistenti
+}
+
+// Configurazione delle etichette in italiano con stili Tailwind
+export const ITALIAN_SPECIAL_MOVE_CONFIG: Record<SpecialMoveType, { label: string; className: string }> = {
+  'z-move': { label: 'Mossa Z', className: 'bg-purple-600 text-white hover:bg-purple-700' },
+  'z-exclusive': { label: 'Mossa Z Esclusiva', className: 'bg-indigo-600 text-white hover:bg-indigo-700' },
+  'max-move': { label: 'Mossa Max', className: 'bg-red-600 text-white hover:bg-red-700' },
+  'g-max': { label: 'Mossa Gigamax', className: 'bg-orange-600 text-white hover:bg-orange-700' },
+  'signature': { label: 'Mossa Peculiare', className: 'bg-amber-500 text-white hover:bg-amber-600' },
+};
