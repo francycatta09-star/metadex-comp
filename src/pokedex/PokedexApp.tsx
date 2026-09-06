@@ -377,7 +377,7 @@ export default function App({ initialId, initialEggGroup, initialType }: Pokedex
     mobileView === 'detail' ? 'flex' : 'hidden'
   } w-full flex-col sm:flex`}
 >
-                  >
+                  
                     {/* Mobile back button */}
                     <button
                       onClick={() => setMobileView('list')}
