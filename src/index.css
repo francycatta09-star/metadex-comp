@@ -178,3 +178,7 @@ header h1 {
 .pokemon-detail-header .type-badge {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.45);
 }
+.pokemon-detail-number {
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.4);
+  paint-order: stroke fill;
+}
