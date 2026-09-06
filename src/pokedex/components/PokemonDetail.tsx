@@ -193,7 +193,7 @@ export default function PokemonDetail({
         {/* Number — right column, balances the artwork on the left */}
           <div className="pokemon-detail-number hidden shrink-0 self-center pl-2 sm:block">
             <div 
-              className="inline-flex rounded-lg bg-black/20 px-2 py-1 font-black text-white/70"
+              className="inline-flex rounded-xl border border-white/30 bg-white/15 px-3 py-1.5 font-black text-white shadow-[0_2px_8px_rgba(0,0,0,0.22)] backdrop-blur-sm"
               style={{
                 fontSize: 'clamp(2.5rem, 5vw, 4rem)',
                 transform: 'skewX(-8deg)'
