@@ -191,7 +191,7 @@ export default function PokemonDetail({
           </div>
 
         {/* Number — right column, balances the artwork on the left */}
-          <div className="hidden shrink-0 self-center pl-2 sm:block">
+          <div className="pokemon-detail-number hidden shrink-0 self-center pl-2 sm:block">
             <div 
               className="font-black text-white/50 drop-shadow-md"
               style={{
