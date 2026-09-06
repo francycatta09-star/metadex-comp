@@ -372,10 +372,10 @@ export default function App({ initialId, initialEggGroup, initialType }: Pokedex
                   </div>
 
                   {/* Right panel: detail + builds */}
-                 <div
+                <div
   className={`${
     mobileView === 'detail' ? 'flex' : 'hidden'
-  } w-full flex-col sm:flex`}
+  } w-full min-w-0 flex-col sm:flex`}
 >
                   
                     {/* Mobile back button */}
