@@ -175,3 +175,6 @@ header h1 {
   padding-left: 0.35rem !important;
   padding-right: 0.35rem !important;
 }
+.pokemon-detail-header .type-badge {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.45);
+}
