@@ -206,7 +206,7 @@ export default function PokemonDetail({
       </div>
 
       {/* Body */}
-      <div className="flex-1 px-6 py-5">
+     <div className="min-w-0 flex-1 px-6 py-5">
         {/* Description */}
         {description && (
           <p className="text-sm leading-relaxed text-gray-600">{description}</p>
