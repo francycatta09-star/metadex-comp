@@ -89,7 +89,7 @@ export default function App({ initialId, initialEggGroup, initialType }: Pokedex
   const [listLoading, setListLoading] = useState(true);
   const [listError, setListError] = useState(false);
 
-  const [selectedId, setSelectedId] = useState<number>(initialId ?? 25);
+const [selectedId, setSelectedId] = useState<number>(initialId ?? 1);
   const [routeType, setRouteType] = useState<string | null>(initialType ?? null);
   const [routeEggGroup, setRouteEggGroup] = useState<string | null>(initialEggGroup ?? null);
   const [detail, setDetail] = useState<PokemonDetailType | null>(null);
