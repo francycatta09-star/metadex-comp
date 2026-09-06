@@ -12,7 +12,7 @@ const API_BASE = 'https://pokeapi.co/api/v2';
 const SPRITE_BASE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon';
 const ARTWORK_BASE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork';
 
-const LIST_KEY = 'pokedex_list_v2';
+const LIST_KEY = 'pokedex_list_v3';
 const TYPES_KEY = 'pokedex_types_v2';
 const DETAIL_PREFIX = 'pokedex_detail_v3_';
 const SPECIES_PREFIX = 'pokedex_species_v2_';
