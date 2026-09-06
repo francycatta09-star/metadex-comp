@@ -302,9 +302,9 @@ export default function App({ initialId, initialEggGroup, initialType }: Pokedex
               {/* Right: language selector + yellow button + vents */}
               <div className="flex items-center gap-3">
                 <LanguageSelector lang={lang} onChange={handleLangChange} />
-                <div className="hidden h-8 w-8 items-center justify-center rounded-full bg-pokedex-yellow shadow-inner sm:flex">
-                  <div className="h-3 w-3 rounded-full bg-yellow-600/40" />
-                </div>
+               <div className="hidden h-8 w-8 items-center justify-center rounded-full bg-[#f6c445] shadow-inner sm:flex">
+  <div className="h-3 w-3 rounded-full bg-[#a96500] shadow-inner" />
+</div>
               </div>
             </div>
 
