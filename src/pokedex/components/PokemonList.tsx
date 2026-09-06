@@ -46,7 +46,7 @@ function updateRouteFilter(
   );
 }
 function displayPokemonName(name: string): string {
-  return name.replace(/-(land|male|incarnate|zero)$/, '');
+  return name.replace(/-(land|male|incarnate|zero|red-striped)$/, '');
 }
 export default function PokemonList({
   pokemon,
