@@ -166,7 +166,11 @@ header h1 {
 .pokemon-card-types {
   gap: 0.125rem !important;
 }
-
+@media (max-width: 639px) {
+  .pokemon-card-types .type-badge svg {
+    display: none;
+  }
+}
 .pokemon-card-types .type-badge {
   padding-left: 0.35rem !important;
   padding-right: 0.35rem !important;
