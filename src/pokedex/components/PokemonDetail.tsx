@@ -177,7 +177,7 @@ export default function PokemonDetail({
             >
               {displayName}
             </h2>
-            <div className="type-badge-cluster mt-3 justify-center">
+          <div className="type-badge-cluster mt-3 flex flex-wrap justify-center gap-3">
               {detail.types.map((tp) => (
                 <TypeBadge
                   key={tp}
