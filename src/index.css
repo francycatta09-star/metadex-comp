@@ -155,3 +155,11 @@ header h1 {
     overflow: hidden !important;
     text-overflow: ellipsis !important;
 }
+.pokemon-card-types .type-badge {
+  padding-left: 0.4rem !important;
+  padding-right: 0.4rem !important;
+}
+
+.pokemon-card-types .type-badge > span {
+  font-size: 0.7rem !important;
+}
