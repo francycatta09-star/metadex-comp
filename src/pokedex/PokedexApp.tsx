@@ -104,12 +104,15 @@ export default function App({ initialId, initialEggGroup, initialType }: Pokedex
   const [section, setSection] = useState<Section>('pokedex');
 
   // Follow the ?pokemon= link coming from the type / egg-group pages
-  useEffect(() => {
-    if (initialId && initialId > 0) {
-      setSelectedId(initialId);
+ useEffect(() => {
+  if (initialId && initialId > 0) {
+    setSelectedId(initialId);
+
+    if (!initialType && !initialEggGroup) {
       setMobileView('detail');
     }
-  }, [initialId]);
+  }
+}, [initialId, initialType, initialEggGroup]);
 
   // Pick up the stored / browser language after hydration
   useEffect(() => {
