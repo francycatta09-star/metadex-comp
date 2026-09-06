@@ -275,9 +275,9 @@ export default function App({ initialId, initialEggGroup, initialType }: Pokedex
 
   return (
     <ResourceProvider lang={lang}>
-    <div className="min-h-[100dvh] bg-[#e4eef0] text-[#17324d]">
-      <div className="mx-auto max-w-[1440px] px-2 py-3 sm:px-5 sm:py-7">
-        <div className="pokedex-shell overflow-hidden rounded-[1.7rem] border border-[#b74642]/50 sm:rounded-[2.2rem]">
+   <div className="h-[100dvh] overflow-hidden bg-[#e4eef0] text-[#17324d]">
+    <div className="mx-auto flex h-full w-full max-w-[1440px] items-center px-2 sm:px-5">
+        <div className="-translate-y-4 pokedex-shell overflow-hidden rounded-[1.7rem] border border-[#b74642]/50 sm:rounded-[2.2rem]">
           {/* === Top lid === */}
           <div className="relative animate-hinge-open">
             <div className="flex items-center justify-between px-5 py-4 sm:px-8 sm:py-5">
