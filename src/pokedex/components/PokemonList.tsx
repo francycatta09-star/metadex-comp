@@ -408,7 +408,9 @@ export default function PokemonList({
                       />
                     </span>
                     <div className="mt-auto min-w-0">
-                      <p className="h-5 truncate text-center text-sm font-bold leading-5 capitalize text-[#17324d]">{p.name}</p>
+                     <p className="h-5 truncate text-center text-sm font-bold leading-5 capitalize text-[#17324d]">
+  {displayPokemonName(p.name)}
+</p>
                       
                       {/* Contenitore dei tipi corretto in orizzontale */}
                    <div className="pokemon-card-types mt-1.5 flex flex-nowrap items-center justify-center gap-1">
