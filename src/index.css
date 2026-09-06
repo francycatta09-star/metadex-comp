@@ -61,15 +61,15 @@ html, body {
 }
 
 /* SPOSTAMENTO MANUALE DIRETTO: Modifica i pixel o le percentuali qui sotto per regolarlo al millimetro */
-#root {
-  width: 96%;
-  max-width: 1400px;
-  height: 85vh;
-  max-height: 85vh;
-  margin-top: 80px; /* <--- Aumenta questo valore (es. 100px, 120px) per abbassarlo quanto vuoi! */
+ #root {
+  width: 100%;
+  max-width: none;
+  height: 100dvh;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
 }
 
 #root > div {
