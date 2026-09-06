@@ -70,7 +70,6 @@ html, body {
   flex-direction: column;
   overflow: hidden;
 }
-}
 
 #root > div {
   width: 100%;
