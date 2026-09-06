@@ -420,7 +420,7 @@ export default function App({ initialId, initialEggGroup, initialType }: Pokedex
                     </div>
 
                     {/* Tab content */}
-                    <div key={selectedId} className="flex-1 overflow-hidden">
+                   <div className="flex-1 overflow-hidden">
                       {tab === 'stats' ? (
                         <div className="animate-fade-in-up h-full">
                           <PokemonDetail
